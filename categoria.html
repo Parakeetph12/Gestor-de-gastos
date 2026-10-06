@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de categoria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro de categoria</h1>
+    <p><a href="index.html">Voltar à página inicial</a></p>
+
+    <form method="post" action="categoria.php" data-destino="categoria.php" novalidate>
+        <tpi2>
+            <p><label>Nome da categoria: <input type="text" name="nome"></label></p>
+            <p><label>Tipo:
+                <select name="tipo">
+                    <option value="">Selecione</option>
+                    <option value="despesa">Despesa</option>
+                    <option value="receita">Receita</option>
+                </select>
+            </label></p>
+            <p><label>Descrição: <input type="text" name="descricao"></label></p>
+            <p><label>Essencial?
+                <select name="essencial">
+                    <option value="">Selecione</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </label></p>
+            <p><label>Limite mensal (R$): <input type="number" step="0.01" name="limite"></label></p>
+            <p><button type="submit">Cadastrar</button></p>
+        </tpi2>
+    </form>
+
+    <div id="resposta"></div>
+    <script src="script.js"></script>
+</body>
+</html>

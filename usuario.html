@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de usuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro de usuário</h1>
+    <p><a href="index.html">Voltar à página inicial</a></p>
+
+    <form method="post" action="usuario.php" data-destino="usuario.php" novalidate>
+        <tpi2>
+            <p><label>Nome: <input type="text" name="nome"></label></p>
+            <p><label>E-mail: <input type="text" name="email"></label></p>
+            <p><label>Senha: <input type="password" name="senha"></label></p>
+            <p><label>Data de nascimento: <input type="date" name="nascimento"></label></p>
+            <p><label>Renda mensal (R$): <input type="number" step="0.01" name="renda"></label></p>
+            <p><button type="submit">Cadastrar</button></p>
+        </tpi2>
+    </form>
+
+    <div id="resposta"></div>
+    <script src="script.js"></script>
+</body>
+</html>
