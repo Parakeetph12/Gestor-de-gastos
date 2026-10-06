@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lançar receita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Lançar receita</h1>
+    <p><a href="index.html">Voltar à página inicial</a></p>
+
+    <form method="post" action="receita.php" data-destino="receita.php" novalidate>
+        <tpi2>
+            <p><label>Descrição: <input type="text" name="descricao"></label></p>
+            <p><label>Valor (R$): <input type="number" step="0.01" name="valor"></label></p>
+            <p><label>Data: <input type="date" name="data"></label></p>
+            <p><label>Fonte:
+                <select name="fonte">
+                    <option value="">Selecione</option>
+                    <option value="Salário">Salário</option>
+                    <option value="Freelance">Freelance</option>
+                    <option value="Investimentos">Investimentos</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </label></p>
+            <p><label>Conta de destino:
+                <select name="conta">
+                    <option value="">Selecione</option>
+                    <option value="Carteira">Carteira</option>
+                    <option value="Conta corrente">Conta corrente</option>
+                    <option value="Poupança">Poupança</option>
+                </select>
+            </label></p>
+            <p><label>Recorrente (todo mês)?
+                <select name="recorrente">
+                    <option value="">Selecione</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </label></p>
+            <p><button type="submit">Lançar receita</button></p>
+        </tpi2>
+    </form>
+
+    <div id="resposta"></div>
+    <script src="script.js"></script>
+</body>
+</html>

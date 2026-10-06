@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Meta mensal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Meta mensal por categoria</h1>
+    <p><a href="index.html">Voltar à página inicial</a></p>
+
+    <form method="post" action="meta.php" data-destino="meta.php" novalidate>
+        <tpi2>
+            <p><label>Categoria:
+                <select name="categoria">
+                    <option value="">Selecione</option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Moradia">Moradia</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Educação">Educação</option>
+                    <option value="Lazer">Lazer</option>
+                </select>
+            </label></p>
+            <p><label>Mês: <input type="month" name="mes"></label></p>
+            <p><label>Limite da meta (R$): <input type="number" step="0.01" name="limite"></label></p>
+            <p><label>Gasto atual (R$): <input type="number" step="0.01" name="gasto"></label></p>
+            <p><label>Avisar a partir de (%): <input type="number" name="alerta" value="80"></label></p>
+            <p><button type="submit">Calcular meta</button></p>
+        </tpi2>
+    </form>
+
+    <div id="resposta"></div>
+    <script src="script.js"></script>
+</body>
+</html>
